@@ -24,7 +24,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "KW//Bundle//SyliusPrzelewy24Bundle": "" }
+        "psr-0": { "KW\\Bundle\\SyliusPrzelewy24Bundle": "" }
     },
     "target-dir": "KW/Bundle/SyliusPrzelewy24Bundle",
     "extra": {
