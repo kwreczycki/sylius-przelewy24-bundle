@@ -1,0 +1,35 @@
+{
+    "name": "kwreczycki/sylius-przelewy24-bundle",
+    "description": "Przelewy24 payment integrations for Sylius e-commerce application.",
+    "keywords": ["Sylius", "Przelewy24", "payments", "Payum"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wręczycki Kamil",
+            "email": "kwreczycki@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "guzzlehttp/guzzle": "~6.0",
+        "phpunit/phpunit": "~4.1",
+        "doctrine/doctrine-fixtures-bundle": "^2.2",
+        "sylius/resource-bundle": "^0.14.0",
+        "sylius/order-bundle": "^0.14.0",
+        "payum/payum": "~0.14.0",
+        "payum/payum-bundle": "~0.14.2",
+        "mockery/mockery": "^0.9.4"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "KW//Bundle//SyliusPrzelewy24Bundle": "" }
+    },
+    "target-dir": "KW/Bundle/SyliusPrzelewy24Bundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

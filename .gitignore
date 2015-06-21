@@ -36,3 +36,4 @@
 # Composer PHAR
 /composer.phar
 /composer.lock
+.idea/*
