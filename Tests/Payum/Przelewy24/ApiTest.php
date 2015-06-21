@@ -33,7 +33,7 @@ class ApiTest extends TestCase
     /** @test */
     public function it_should_throw_exception_if_one_of_parameters_from_return_response_is_missing()
     {
-        $this->setExpectedException("\\InvalidArgumentException", "One of parameter is missing.");
+        $this->setExpectedException("\\InvalidArgumentException", "Missing one of parameter.");
 
         $postResponse = $this->apiFixtures->createPostResponse();
         unset($postResponse['p24_session_id']);
