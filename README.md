@@ -4,7 +4,7 @@ Sylius przelewy24 payments integration
 # Instalation
 ## 1. Download bundle
 ```
-"require-dev": {
+"require": {
     "kwreczycki/sylius-przelewy24-bundle": "*@dev"
 }
 ```
@@ -55,4 +55,4 @@ payum:
 
 ## 4. Add payment method to database
 
-Execute ``php app/console doctrine:fixtures:load`
+Execute `php app/console doctrine:fixtures:load`
