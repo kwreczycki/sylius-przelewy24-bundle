@@ -11,11 +11,6 @@ class Przelewy24Factory extends AbstractPaymentFactory
 {
     const PAYMENT_NAME = 'przelewy24';
 
-    public function create(ContainerBuilder $container, $paymentName, array $config)
-    {
-        return parent::create($container, $paymentName, $config);
-    }
-
     public function addConfiguration(ArrayNodeDefinition $builder)
     {
         parent::addConfiguration($builder);
