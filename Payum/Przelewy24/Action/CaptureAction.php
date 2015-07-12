@@ -45,10 +45,6 @@ class CaptureAction extends PaymentAwareAction
 
     private function composeDetails(PaymentInterface $payment, TokenInterface $token)
     {
-        if ($payment->getDetails()) {
-            return;
-        }
-
         $order = $payment->getOrder();
 
         $details = [];
