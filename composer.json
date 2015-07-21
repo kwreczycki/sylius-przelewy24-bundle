@@ -14,8 +14,8 @@
         "guzzlehttp/guzzle": "~6.0",
         "phpunit/phpunit": "~4.1",
         "doctrine/doctrine-fixtures-bundle": "^2.2",
-        "sylius/resource-bundle": "^0.14.0",
-        "sylius/order-bundle": "^0.14.0",
+        "sylius/resource-bundle": "0.15.*@dev",
+        "sylius/order-bundle": "0.15.*@dev",
         "payum/payum": "~0.14.0",
         "payum/payum-bundle": "~0.14.2",
         "mockery/mockery": "^0.9.4"
