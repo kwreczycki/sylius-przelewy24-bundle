@@ -1,5 +1,5 @@
 {
-    "name": "kwreczycki/sylius-przelewy24-bundle",
+    "name": "raptek/sylius-przelewy24-bundle",
     "description": "Przelewy24 payment integrations for Sylius e-commerce application.",
     "keywords": ["Sylius", "Przelewy24", "payments", "Payum"],
     "license": "MIT",
