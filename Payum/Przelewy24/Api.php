@@ -10,6 +10,7 @@ class Api
 {
     const STATUS_SUCCESS = 'TRUE';
     const STATUS_FAILED = 'err00';
+    const CURRENCY = 'PLN';
 
     /** @var string */
     private $gatewayId;
@@ -45,7 +46,7 @@ class Api
             'p24_email' => $details['p24_email'],
             'p24_return_url_ok' => sprintf('%s/payment/capture/%s', $this->returnUrlDomain, $details['hash']),
             'p24_return_url_error' => sprintf('%s/payment/capture/%s', $this->returnUrlDomain, $details['hash']),
-            'p24_crc' => $this->createHashForNewPayment($details)
+            'p24_sign' => $this->createHashForNewPayment($details)
         ];
 
         return $params;
@@ -66,7 +67,7 @@ class Api
                         'p24_session_id' => $notificationResponse['p24_session_id'],
                         'p24_order_id' => $notificationResponse['p24_order_id'],
                         'p24_kwota' => $notificationResponse['p24_amount'],
-                        'p24_crc' => $this->createHashForPaymentStatus(
+                        'p24_sign' => $this->createHashForPaymentStatus(
                             $notificationResponse->toUnsafeArray()
                         )
                     ]
@@ -128,8 +129,8 @@ class Api
             $details['p24_session_id'] . '|' .
             $gatewayIdOrOrderId . '|' .
             $details['p24_amount'] . '|' .
+            self::CURRENCY . '|' .
             $this->crcKey
         );
     }
-
 }
