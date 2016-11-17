@@ -50,7 +50,7 @@ class ApiTest extends TestCase
 
         $streamedResponse = \Mockery::mock(Response::class);
         $streamedResponse->shouldReceive('getBody')->andReturn($this->apiFixtures->createSuccessResponseBody());
-        
+
         $this->httpClient->shouldReceive('post')->withArgs([
                 $this->apiFixtures->statusPaymentUrl,
                 $this->apiFixtures->getStatusPaymentFormParams()
