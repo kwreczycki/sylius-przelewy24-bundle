@@ -50,7 +50,7 @@ class CaptureAction extends PaymentAwareAction
         $details = [];
         $details['hash'] = $token->getHash();
         $details['p24_amount'] = $order->getTotal();
-        $details['p24_email'] = $order->getEmail();
+        $details['p24_email'] = $order->getCustomer()->getEmail();
         $details['p24_payment_id'] = $payment->getId();
         $details['p24_session_id'] = $payment->getId() . time();
         $details['p24_desc'] = sprintf("Zamówienie zawierające %d produktów na całkowitą kwotę %01.2f",
