@@ -28,7 +28,7 @@ class ApiFixtures {
             'p24_order_id' => 1,
             'p24_id_sprzedawcy' => 2,
             'p24_amount' => 1111,
-            'p24_crc' => 'sdsdsdxx23232323'
+            'p24_sign' => 'sdsdsdxx23232323'
         ];
     }
 
@@ -40,7 +40,7 @@ class ApiFixtures {
                 'p24_session_id' => 'sd1121212',
                 'p24_order_id' => 1,
                 'p24_kwota' => 1111,
-                'p24_crc' => '2b9624a30eaae0ea012436b67d89b87c'
+                'p24_sign' => '14a7164394d195a8eb89c77de8c6d225'
             ]
         ];
     }

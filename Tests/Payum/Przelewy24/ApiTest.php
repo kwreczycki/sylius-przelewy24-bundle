@@ -24,7 +24,7 @@ class ApiTest extends TestCase
                 'p24_email',
                 'p24_return_url_ok',
                 'p24_return_url_error',
-                'p24_crc'
+                'p24_sign'
             ],
             $formFields
         );
@@ -50,7 +50,7 @@ class ApiTest extends TestCase
 
         $streamedResponse = \Mockery::mock(Response::class);
         $streamedResponse->shouldReceive('getBody')->andReturn($this->apiFixtures->createSuccessResponseBody());
-
+        
         $this->httpClient->shouldReceive('post')->withArgs([
                 $this->apiFixtures->statusPaymentUrl,
                 $this->apiFixtures->getStatusPaymentFormParams()
@@ -84,4 +84,3 @@ class ApiTest extends TestCase
     /** @var ApiFixtures */
     private $apiFixtures;
 }
- 
